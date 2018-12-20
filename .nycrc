@@ -1,0 +1,12 @@
+{
+	"nyc": {
+		"exclude": [
+			"node_modules",
+			"bin",
+			"coverage",
+			"test",
+			"app/main.js",
+			"app/server.js"
+		]
+	}
+}
