@@ -1,4 +1,5 @@
 import assert from 'assert';
+import '../app/main';
 
 describe('Entry Point', () => {
 	it('should return -1 when server starts', () => {

@@ -14,7 +14,6 @@ before_script:
 
 script:
     - yarn run build
-    - yarn add coveralls
     - yarn test:coverage
 
 after_script:

@@ -29,7 +29,7 @@ const envExists = (env) => {
 const envVars = {
 	PORT: process.env.PORT || 5000,
 	DATABASE_URL: process.env.DATABASE_URL,
-	DATABASE_DIALECT: process.env.DATABASE_DIALECT,
+	DATABASE_DIALECT: process.env.DATABASE_DIALECT || 'postgres',
 	NODE_ENV: process.env.NODE_ENV || 'production'
 };
 
