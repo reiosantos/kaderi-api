@@ -27,7 +27,7 @@ app.use(cors());
 routes(app);
 
 app.use((req, res) => res.status(404).json({
-	message: 'Not Found. Use /api/v1 to access the api'
+	message: 'Not Found. Use /api/v1 to access the api.'
 }));
 
 export default app;

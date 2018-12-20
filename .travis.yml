@@ -13,8 +13,9 @@ before_script:
     - ./cc-test-reporter before-build
 
 script:
-    - npm test
-    - npm run build
+    - yarn run build
+    - yarn add coveralls
+    - yarn test:coverage
 
 after_script:
     - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
