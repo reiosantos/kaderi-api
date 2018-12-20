@@ -1,0 +1,7 @@
+exclude_patterns:
+  - '**/database/*'
+  - '**/*.spec.js'
+  - '**/*.test.js'
+  - 'migrations/*'
+  - 'test/*'
+  - 'tests/*'
