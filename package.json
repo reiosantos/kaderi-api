@@ -11,7 +11,7 @@
     "start:dev": "NODE_ENV=development DEBUG=kaderi nodemon --exec babel-node app/server.js",
     "lint": "node_modules/.bin/eslint ./src",
     "test": "mocha --compilers js:@babel/register",
-    "test:coverage": "nyc --reporter=html --reporter=text mocha --require @babel/register"
+    "test:coverage": "nyc --reporter=lcov --reporter=text mocha --require @babel/register"
   },
   "repository": {
     "type": "git",
@@ -20,20 +20,6 @@
   "homepage": "https://github.com/reiosantos/kaderi-api#readme",
   "bugs": {
     "url": "https://github.com/reiosantos/kaderi-api/issues"
-  },
-  "jest": {
-    "collectCoverage": true,
-    "collectCoverageFrom": [
-      "app/**/*.js",
-      "!app/main.js",
-      "!app/server.js",
-      "!**/__tests__/**/*.js?(x)"
-    ],
-    "testMatch": [
-      "<rootDir>/src/**/__tests__/**/?(*.)(spec|test)js",
-      "<rootDir>/src/**/?(*.)(spec|test).js"
-    ],
-    "testEnvironment": "node"
   },
   "commitplease": {
     "style": "angular",
@@ -53,6 +39,7 @@
     "body-parser": "~1.13.2",
     "cookie-parser": "~1.3.5",
     "cors": "^2.8.5",
+    "coveralls": "^3.0.2",
     "debug": "~2.2.0",
     "dotenv": "^6.2.0",
     "express": "~4.13.1",
@@ -62,6 +49,7 @@
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
     "@babel/register": "^7.0.0",
     "babel-eslint": "^10.0.1",
