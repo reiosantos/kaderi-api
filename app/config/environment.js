@@ -25,11 +25,14 @@ const envExists = (env) => {
     \n${undefinedVariables.join('\n')}`);
 };
 
+const DATABASE_URL = process.env.NODE_ENV === 'test'
+	? process.env.KADERI_TEST_DATABASE_URL
+	: process.env.KADERI_DATABASE_URL;
 
 const envVars = {
 	PORT: process.env.PORT || 5000,
-	DATABASE_URL: process.env.DATABASE_URL,
-	DATABASE_DIALECT: process.env.DATABASE_DIALECT || 'postgres',
+	DATABASE_URL,
+	DATABASE_DIALECT: process.env.DATABASE_DIALECT || 'mongo',
 	NODE_ENV: process.env.NODE_ENV || 'production'
 };
 

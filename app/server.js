@@ -1,7 +1,7 @@
 import debug from 'debug';
 import http from 'http';
 import env from './config/environment';
-import app from './main';
+import app from '.';
 
 const logger = debug('kaderi');
 const server = http.createServer(app);
