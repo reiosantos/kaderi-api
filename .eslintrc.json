@@ -25,6 +25,7 @@
     "max-len": [2, { "code": 100, "ignoreUrls": true }],
     "no-tabs": "off",
     "comma-dangle": [2, "never"],
-    "comma-spacing": [2, { "before": false, "after": true }]
+    "comma-spacing": [2, { "before": false, "after": true }],
+    "no-underscore-dangle": "off"
   }
 }
